@@ -1,0 +1,109 @@
+/* :: 4 lights dot loader :: style :: */
+
+:root{--color01A: rgb(45, 45, 255);
+    --color01B: rgb(0, 247, 255);
+    --color01-Shadow:rgb(17, 0, 255);
+    /* colors for the 2nd + 4th dot */
+    --color02A:rgb(0, 112, 15);
+    --color02B:rgb(0, 252, 176);
+    --color02-Shadow:rgb(0, 134, 51);
+}
+
+*{box-sizing: border-box;
+    background-color: black;
+    margin: 0;
+    padding: 0;}
+
+.container{ display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 8rem;
+}
+
+
+/*  :::::::: THE 4 DOTS ::::::::::::::::::::::::::::::::::::: 
+*   1 and 3rd have equal values except "animation values",-
+*    (play around with them ☻ ...)
+*   + 2nd and 4th dot have other equal values except"" :: */
+
+.dot-01{ position: absolute;
+    top: 0; bottom: 0; 
+    left: 0; right: 0;
+    background: radial-gradient(var(--color01B), var(--color01A),var(--color01-Shadow));
+    width: 4rem; height: 4rem;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0 0 1rem var(--color01-Shadow, 0.5),
+    0 0 2rem var(--color01-Shadow, 0.4),
+    0 0 3rem var(--color01-Shadow, 0.3),
+    0 0 4rem var(--color01-Shadow, 0.2),
+    0 0 6rem var(--color01-Shadow, 0.2);
+    animation: circle-01 4s linear infinite;
+    transition: 0.2s ease-in-out;
+} 
+@keyframes circle-01{ 0%{ transform: rotate(0deg)translate(-12.5rem)rotate(0deg);}
+25%{ opacity: 0%;}
+100%{ transform: rotate(-360deg)translate(-12.5rem)rotate(360deg)}}
+
+
+.dot-02{ position: absolute;
+    top: 0; bottom: 0; 
+    left: 0; right: 0;
+    background: radial-gradient(var(--color02B), var(--color02A), var(--color02-Shadow));
+    width: 4rem; height: 4rem;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0 0 1rem var(--color02-Shadow, 0.5),
+    0 0 2rem var(--color02-Shadow, 0.4),
+    0 0 3rem var(--color02-Shadow, 0.3),
+    0 0 4rem var(--color02-Shadow, 0.2),
+    0 0 6rem var(--color02-Shadow, 0.2);
+    /* animation time value => every 2nd dot is different! */
+    animation: circle-02 3.5s linear infinite;
+    transition: 0.2s ease-in-out;
+} 
+@keyframes circle-02{ 0%{ transform: rotate(0deg)translate(12.5rem)rotate(0deg)}
+25%{opacity: 0%}
+100%{ transform: rotate(360deg)translate(12.5rem)rotate(360deg)}}
+
+.dot-03{ position: absolute;
+    top: 0; bottom: 0; 
+    left: 0; right: 0;
+    background: radial-gradient(var(--color01B), var(--color01A),var(--color01-Shadow));
+    width: 4rem; height: 4rem;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0 0 1rem var(--color01-Shadow, 0.5),
+    0 0 2rem var(--color01-Shadow, 0.4),
+    0 0 3rem var(--color01-Shadow, 0.3),
+    0 0 4rem var(--color01-Shadow, 0.2),
+    0 0 6rem var(--color01-Shadow, 0.2); 
+    animation: circle-03 4s linear infinite;
+    transition: 0.2s ease-in-out;
+} 
+@keyframes circle-03{ 0%{ transform: rotate(360deg)translate(12rem)rotate(360deg)}
+25%{opacity: 0%}
+100%{ transform: rotate(0deg)translate(12rem)rotate(0deg)}}
+
+.dot-04{ position: absolute;
+    top: 0; bottom: 0; 
+    left: 0; right: 0;
+    background: radial-gradient(var(--color02B), var(--color02A), var(--color02-Shadow));
+    width: 4rem; height: 4rem;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0 0 1rem var(--color02-Shadow, 0.5),
+    0 0 2rem var(--color02-Shadow, 0.4),
+    0 0 3rem var(--color02-Shadow, 0.3),
+    0 0 4rem var(--color02-Shadow, 0.2),
+    0 0 6rem var(--color02-Shadow, 0.2);
+    animation: circle-04 3.5s linear infinite;
+    transition: 0.2s ease-in-out;
+} 
+@keyframes circle-04{ 0%{ transform: rotate(-180deg)translate(12.5rem)rotate(-180deg)}
+25%{opacity: 0%}
+100%{ transform: rotate(180deg)translate(12.5rem)rotate(180deg)}}
+
+
+/* :::::: the end :::::: */
